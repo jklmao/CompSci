@@ -48,28 +48,16 @@ public class CountLettersInArray {
 		}
 	}
 
-	public static int[] countLetters(char[] chars) {
+	public static int[] countLetters(char[] chars) { // I overcomplicated it for no reason.
 
 		int[] freqArray = new int[26];
-		int[] visited = new int[26];
 
-		for (int b = 0; b < chars.length; b++) { // To get the first character
+		for (int x = 0; x < chars.length; x++) {
 
-			for (int c = 0; c < chars.length; c++) { // To loop through the rest of the array's characters
-													 
-				int charint = (int) chars[c]; // Get the Character in integer form
-				int index = charint - 97; // Get the index to put into the array
+			int charint = chars[x];
+			int index = charint - 97;
 
-				if (chars[c] == chars[b] && visited[index] != -1) { 
-				// Checks if the characters are the same
-				// Also checks if the character has been visited
-
-					visited[index] = -1; // Because it's been visited, other character get set to -1
-					freqArray[index]++; // Increment the freqArray
-
-				}
-
-			}
+			freqArray[index]++;
 
 		}
 
