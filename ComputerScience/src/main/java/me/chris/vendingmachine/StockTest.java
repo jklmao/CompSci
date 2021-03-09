@@ -9,7 +9,7 @@ public class StockTest {
 		stock1.setPreviousClosingPrice(34.5);
 		stock1.setCurrentPrice(34.35);
 
-		System.out.println(stock1.getPercentChange());
+		System.out.println("%" + stock1.getPercentChange());
 
 	}
 
